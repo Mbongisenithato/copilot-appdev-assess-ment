@@ -1,0 +1,15 @@
+# Cell 1: Setup
+import schedule
+import time
+
+# Cell 2: Reminder Function
+def send_reminder(message):
+    print(f"🔔 Reminder: {message}")
+
+# Cell 3: Schedule
+schedule.every(5).seconds.do(send_reminder, message="Stretch your legs!")
+
+# Cell 4: Run Loop
+while True:
+    schedule.run_pending()
+    time.sleep(1)
